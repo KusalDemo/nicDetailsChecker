@@ -10,9 +10,9 @@ function App() {
     /*<section>
         <h1>Hello ReactJS</h1>
     </section>*/
-      <section>
-          <div>
-              <h1>Nic Detail Checker</h1>
+      <section id="mainSection">
+          <div id="mainDiv">
+              <h1 id="title">Nic Detail Checker</h1>
               <NicDetailCheckerCard/>
           </div>
       </section>
