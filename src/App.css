@@ -1,0 +1,11 @@
+/*section{
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}*/
+section div{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
