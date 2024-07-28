@@ -1,4 +1,3 @@
-import "./style.css";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -7,17 +6,6 @@ import {SubmitButton} from "../button/SubmitButton/SubmitButton.jsx";
 import {useEffect, useState} from "react";
 import lankaNIC from "lanka-nic";
 import {Link} from "react-router-dom";
-
-/*const CustomCard = styled(CustomCard)(() => ({
-    width:{
-        xs: 300,
-        sm: 400,
-        md: 500,
-        lg: 500,
-
-    },
-    elevation: 100
-}));*/
 
 export function NicDetailCheckerCard() {
     let [idNum, setIdNum] = useState('');
