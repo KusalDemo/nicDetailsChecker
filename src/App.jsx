@@ -18,8 +18,9 @@ function App() {
             <div id="mainDiv">
                 <h1 id="title">NIC Detail Checker</h1>
                 <Routes>
+                    <Route path={"*"} element={<Navigate to={"/getStartCard"}/>}></Route>
+                    <Route path={"/getStartCard"} element={<GetStartCard/>}/>
                     <Route path={"/nicDetailChecker"} element={<NicDetailCheckerCard/>}/>
-                    <Route path={"*"} element={<Navigate to={"/GetStartCard"}/>}></Route>
                 </Routes>
             </div>
         </section>
