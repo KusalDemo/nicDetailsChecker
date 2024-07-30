@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import {TextField} from "@mui/material";
 import {SubmitButton} from "../button/SubmitButton/SubmitButton.jsx";
 import {useEffect, useState} from "react";
-import lankaNIC from "lanka-nic";
+import lankaNIC, {infoNic} from "lanka-nic-2019";
 import {Link} from "react-router-dom";
 
 export function NicDetailCheckerCard() {
@@ -30,10 +30,11 @@ export function NicDetailCheckerCard() {
                                    onChange={(e) => setIdNum(e.target.value)}/>
                         <SubmitButton idNumber={idNum} onClick={(idNumber) => {
                             try {
-                                let {dateOfBirth, gender} = lankaNIC.getInfoFromNIC(idNumber);
-                                const formattedDate = dateOfBirth.toISOString().split('T')[0];
-                                setBirthday(formattedDate);
-                                console.log(formattedDate);
+                                /*let {dateOfBirth, gender} = lankaNIC.getInfoFromNIC(idNumber);
+                                const formattedDate = dateOfBirth.toISOString().split('T')[0];*/
+                                const {birthday,gender}=infoNic(idNumber);
+                                setBirthday(birthday);
+                                console.log(gender);
                                 setUserGender(gender);
                                 console.log(gender);
                             } catch (err) {
